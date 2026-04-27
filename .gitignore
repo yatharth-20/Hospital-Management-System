@@ -1,0 +1,14 @@
+# IDE files
+.vscode/
+.idea/
+
+# PHP
+vendor/
+composer.lock
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Project specific
+config/runtime.php
