@@ -21,6 +21,9 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     role ENUM('admin', 'doctor', 'receptionist', 'laboratory', 'pharmacy', 'patient', 'test') NOT NULL,
     patient_id INT DEFAULT NULL,
+    email VARCHAR(100) UNIQUE NULL,
+    reset_token VARCHAR(100) DEFAULT NULL,
+    reset_token_expiry DATETIME DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE SET NULL
 );

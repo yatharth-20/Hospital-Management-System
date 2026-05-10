@@ -66,7 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <label for="password">Password</label>
+                    <a href="forgot_password.php" style="font-size: 0.8rem; color: var(--secondary-color); text-decoration: none;">Forgot Password?</a>
+                </div>
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" name="login" class="btn"><i class="fas fa-sign-in-alt"></i> Login</button>
